@@ -3,6 +3,9 @@
 Quentin BEAUCHET <br>
 Pierre KOUYOUMDJIAN <br>
 
+<h1>⚠️WARNING⚠️</h1>
+Notre jeu ne fonctionne pas sur safari et vu qu'on a pas de mac on ne peut pas regler le probleme.
+
 <a href="https://power-of-rotations.herokuapp.com/"><h1>Lien du jeu</h1></a>
 
 <h1>Le jeu</h1>
