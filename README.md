@@ -90,7 +90,7 @@ Pierre KOUYOUMDJIAN <br>
 
     La gui n'était pas terminée, on avait encore des problèmes d'audio et encore très peu de niveaux.
 
-<h2><i>La version finale</i></h2>
+<h2><i>La version finale / Demo</i></h2>
 
 [<img src="https://img.youtube.com/vi/YCBGXZKgEaU/maxresdefault.jpg" alt="v0" width="50%" style="border: 1px solid grey">](https://www.youtube.com/watch?v=YCBGXZKgEaU)
 
