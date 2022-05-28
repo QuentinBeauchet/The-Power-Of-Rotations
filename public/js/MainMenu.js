@@ -186,7 +186,7 @@ export default class MainMenu {
     if (this.page == 1) {
       this.showElement(this.prev, true);
     }
-    if (this.page == this.levels.length % 9) {
+    if (this.page == Math.floor(this.levels.length / 9)) {
       this.showElement(this.next, false);
     } else {
       this.showElement(this.next, true);
