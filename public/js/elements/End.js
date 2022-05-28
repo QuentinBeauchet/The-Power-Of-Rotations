@@ -66,6 +66,7 @@ export default class End {
   onPlayerCollision() {
     let endTime = this.scene.getTimer();
     this.scene.pausex();
+    this.scene.ended = true;
     this.scene.assetsManager.Audio["music"].stop();
     this.scene.assetsManager.Audio["end"].play();
     BABYLON.Animation.CreateAndStartAnimation(
@@ -96,12 +97,14 @@ export default class End {
       time.text = endTime;
       completion.text = `${this.scene.collected}/${this.scene.collectable} Pumpkins Collected`;
 
-      button.onPointerClickObservable.add(() => {
+      this.scene.exitLevel = () => {
         fetch(
           `/addScore?level=${this.scene.file}&time=${endTime}&collected=${this.scene.collected}&collectable=${this.scene.collectable}`
         );
         window.changeScene(1 + parseInt(this.scene.file.replace(/[A-Za-z$-/_]/g, "")));
-      });
+      };
+
+      button.onPointerClickObservable.add(() => this.scene.exitLevel());
     }, 2400);
   }
 }

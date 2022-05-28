@@ -138,57 +138,59 @@ export default class Player {
   }
 
   move() {
-    if (this.scene.inputStates.enter && Date.now() - this.LastKeyDown.enter > 300) {
-      this.scene.distanceCamera(this.normalCamera);
-      this.normalCamera = !this.normalCamera;
-      this.LastKeyDown.enter = Date.now();
-    }
-    if (this.normalCamera) {
-      if (this.scene.inputStates.space && this.canJump()) {
-        this.setLinearVelocity();
-        this.scene.assetsManager.Audio["jump"].play();
-        if (!window.easyMode) {
-          this.jump--;
+    if (!this.scene.ended) {
+      if (this.scene.inputStates.enter && Date.now() - this.LastKeyDown.enter > 300) {
+        this.scene.distanceCamera(this.normalCamera);
+        this.normalCamera = !this.normalCamera;
+        this.LastKeyDown.enter = Date.now();
+      }
+      if (this.normalCamera) {
+        if (this.scene.inputStates.space && this.canJump()) {
+          this.setLinearVelocity();
+          this.scene.assetsManager.Audio["jump"].play();
+          if (!window.easyMode) {
+            this.jump--;
+          }
+          this.LastKeyDown.space = Date.now();
         }
-        this.LastKeyDown.space = Date.now();
-      }
-      if (this.scene.inputStates.down) {
-        this.speed = 0;
-        this.mesh.physicsImpostor.setAngularVelocity(BABYLON.Vector3.Zero());
-        this.mesh.physicsImpostor.setLinearVelocity(BABYLON.Vector3.Zero());
-        this.resetRotation();
-      }
-      if (this.scene.inputStates.left) {
-        this.updateSpeed(true);
-        this.setAngularVelocity();
-      }
-      if (this.scene.inputStates.right) {
-        this.updateSpeed(false);
-        this.setAngularVelocity();
-      }
-      if (this.scene.inputStates.r && Date.now() - this.LastKeyDown.r > 300) {
-        this.respawn();
-        this.LastKeyDown.r = Date.now();
-      }
-      if (Object.keys(this.scene.inputStates).length) {
-        this.scene.hideTitle();
-      }
-    } else {
-      if (this.scene.inputStates.up) {
-        if (this.scene.camera.radius > 5) {
-          this.scene.camera.radius -= 1;
+        if (this.scene.inputStates.down) {
+          this.speed = 0;
+          this.mesh.physicsImpostor.setAngularVelocity(BABYLON.Vector3.Zero());
+          this.mesh.physicsImpostor.setLinearVelocity(BABYLON.Vector3.Zero());
+          this.resetRotation();
         }
-      }
-      if (this.scene.inputStates.down) {
-        if (this.scene.camera.radius < 400) {
-          this.scene.camera.radius += 1;
+        if (this.scene.inputStates.left) {
+          this.updateSpeed(true);
+          this.setAngularVelocity();
         }
-      }
-      if (this.scene.inputStates.left) {
-        this.scene.camera.alpha -= 0.01;
-      }
-      if (this.scene.inputStates.right) {
-        this.scene.camera.alpha += 0.01;
+        if (this.scene.inputStates.right) {
+          this.updateSpeed(false);
+          this.setAngularVelocity();
+        }
+        if (this.scene.inputStates.r && Date.now() - this.LastKeyDown.r > 300) {
+          this.respawn();
+          this.LastKeyDown.r = Date.now();
+        }
+        if (Object.keys(this.scene.inputStates).length) {
+          this.scene.hideTitle();
+        }
+      } else {
+        if (this.scene.inputStates.up) {
+          if (this.scene.camera.radius > 5) {
+            this.scene.camera.radius -= 1;
+          }
+        }
+        if (this.scene.inputStates.down) {
+          if (this.scene.camera.radius < 400) {
+            this.scene.camera.radius += 1;
+          }
+        }
+        if (this.scene.inputStates.left) {
+          this.scene.camera.alpha -= 0.01;
+        }
+        if (this.scene.inputStates.right) {
+          this.scene.camera.alpha += 0.01;
+        }
       }
     }
 

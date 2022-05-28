@@ -251,7 +251,9 @@ export default class Scene {
     } else if (key === "r") {
       this.inputStates.r = state;
     } else if (key === "Escape") {
-      if (state) {
+      if (this.ended) {
+        this.exitLevel();
+      } else if (state) {
         if (this.menu.isVisible) {
           this.resume();
           this.menu.isVisible = false;
