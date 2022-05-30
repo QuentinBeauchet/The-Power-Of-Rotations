@@ -123,8 +123,8 @@ class RotatorFR extends Rotator {
 
 class RotatorFL extends Rotator {
   onPlayerCollision() {
-    this.scene.player.mesh.position.x = this.box.position.x - 1;
-    this.rotate("left", 270, 360, new BABYLON.Vector3(-1, 0, -1), new BABYLON.Vector3(1, 1, 1));
+    this.scene.player.mesh.position.x = this.box.position.x + 1;
+    this.rotate("left", 270, 360, new BABYLON.Vector3(-1, 0, 1), new BABYLON.Vector3(1, 1, 1));
   }
 
   setRotation() {
