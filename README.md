@@ -19,6 +19,8 @@ Notre jeu ne fonctionne pas sur safari et vu qu'on a pas de mac on ne peut pas r
 >
 > Il y a un mode facile a activer depuis le menu de sélection des niveaux qui accorde au joueur un nombre de saut infini.
 
+[La demo de notre jeu](#demo)
+
 <h1>Nos types de blocs</h1>
 
 - <h2>Les checkpoints:</h2>
@@ -93,7 +95,7 @@ Notre jeu ne fonctionne pas sur safari et vu qu'on a pas de mac on ne peut pas r
 
     La gui n'était pas terminée, on avait encore des problèmes d'audio et encore très peu de niveaux.
 
-<h2><i>La version finale / Demo</i></h2>
+<h2 id="demo"><i>La version finale / Demo</i></h2>
 
 [<img src="https://img.youtube.com/vi/YCBGXZKgEaU/maxresdefault.jpg" alt="v0" width="50%" style="border: 1px solid grey">](https://www.youtube.com/watch?v=YCBGXZKgEaU)
 
