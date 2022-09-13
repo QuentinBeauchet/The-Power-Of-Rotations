@@ -155,7 +155,7 @@
                 "populateNinePatchSlicesFromImage": false,
                 "autoScale": false,
                 "stretch": 1,
-                "source": "/assets/images/help.png",
+                "source": "https://quentinbeauchet.github.io/The-Power-Of-Rotations/assets/images/help.png",
                 "cellWidth": 1200,
                 "cellHeight": 1200,
                 "cellId": -1,
