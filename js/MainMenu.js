@@ -7,7 +7,7 @@ export default class MainMenu {
     this.initBackground();
 
     this.click = new BABYLON.Sound("mouseclick", "../The-Power-Of-Rotations/assets/audio/click.wav", this.scene);
-    this.music = new BABYLON.Sound("music", "../assets/audio/menu.wav", this.scene, null, {
+    this.music = new BABYLON.Sound("music", "../The-Power-Of-Rotations/assets/audio/menu.wav", this.scene, null, {
       loop: true,
       autoplay: true,
     });
@@ -33,7 +33,7 @@ export default class MainMenu {
   async initStartGui() {
     this.state = "START";
     this.page = 0;
-    await this.advancedTexture.parseFromURLAsync("../assets/gui/start.json");
+    await this.advancedTexture.parseFromURLAsync("../The-Power-Of-Rotations/assets/gui/start.json");
     let start = this.advancedTexture.getControlByName("Start");
 
     var animationWidth = new BABYLON.Animation(
@@ -97,7 +97,7 @@ export default class MainMenu {
 
   async initLevelsGui() {
     this.state = "LEVELS";
-    await this.advancedTexture.parseFromURLAsync("../assets/gui/menu.json");
+    await this.advancedTexture.parseFromURLAsync("../The-Power-Of-Rotations/assets/gui/menu.json");
 
     this.LevelsGrid = this.advancedTexture.getControlByName("LevelsGrid");
     this.HelpGrid = this.advancedTexture.getControlByName("HelpGrid");

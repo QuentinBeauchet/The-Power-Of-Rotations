@@ -73,7 +73,7 @@ export default class Collectible {
     this.scene.assetsManager.Audio["collected"].play();
     BABYLON.ParticleHelper.ParseFromFileAsync(
       "collected",
-      "../../assets/particles/collected.json",
+      "../../The-Power-Of-Rotations/assets/particles/collected.json",
       this.scene.scene
     ).then((sys) => (sys.emitter = this.mesh.position));
     this.mesh.dispose();
