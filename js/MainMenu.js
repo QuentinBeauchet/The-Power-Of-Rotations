@@ -6,7 +6,7 @@ export default class MainMenu {
 
     this.initBackground();
 
-    this.click = new BABYLON.Sound("mouseclick", "../assets/audio/click.wav", this.scene);
+    this.click = new BABYLON.Sound("mouseclick", "../The-Power-Of-Rotations/assets/audio/click.wav", this.scene);
     this.music = new BABYLON.Sound("music", "../assets/audio/menu.wav", this.scene, null, {
       loop: true,
       autoplay: true,
