@@ -1,8 +1,6 @@
 import Scene from "./Scene.js";
 import MainMenu from "./MainMenu.js";
 
-window.path = window.location.href
-
 let iframe = document.createElement("iframe");
 iframe.src = "https://editor.isf.video/shaders/5e7a7f837c113618206ddf11/embed?embed_controls_state=1";
 iframe.setAttribute("frameborder", "0");

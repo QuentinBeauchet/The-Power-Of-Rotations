@@ -60,7 +60,7 @@ export default class End {
   setParticles() {
     BABYLON.ParticleHelper.ParseFromFileAsync(
       "end",
-      "../../assets/particles/end.json",
+      `${window.location.href}/assets/particles/end.json`,
       this.scene.scene
     ).then(
       (sys) =>
