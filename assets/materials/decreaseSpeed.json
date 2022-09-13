@@ -1478,7 +1478,7 @@
         "homogeneousRotationInUVTransform": false,
         "isBlocking": true,
         "hasAlpha": false,
-        "name": "/The-Power-Of-Rotations/assets/materials/tile.png",
+        "name": "/assets/materials/tile.png",
         "getAlphaFromRGB": false,
         "level": 1,
         "coordinatesIndex": 0,

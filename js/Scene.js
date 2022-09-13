@@ -34,7 +34,7 @@ export default class Scene {
   async initScene() {
     window.engine.displayLoadingUI();
 
-    let file = await fetch(`./The-Power-Of-Rotations/assets/levels/${this.file}`);
+    let file = await fetch(`./assets/levels/${this.file}`);
     if (file.status == 404) {
       this.loaded = true;
       window.engine.hideLoadingUI();

@@ -55,73 +55,73 @@
   "assets": {
     "models": {
       "baseball": {
-        "path": "../../The-Power-Of-Rotations/assets/models/baseball/",
+        "path": "../../assets/models/baseball/",
         "model": "scene.gltf"
       },
       "pumpkin": {
-        "path": "../../The-Power-Of-Rotations/assets/models/pumpkin/",
+        "path": "../../assets/models/pumpkin/",
         "model": "pumpkin.gltf"
       },
       "trampoline": {
-        "path": "../../The-Power-Of-Rotations/assets/models/trampoline/",
+        "path": "../../assets/models/trampoline/",
         "model": "trampoline.obj"
       },
       "flag": {
-        "path": "../../The-Power-Of-Rotations/assets/models/flag/",
+        "path": "../../assets/models/flag/",
         "model": "flag.obj"
       },
       "enemy": {
-        "path": "../../The-Power-Of-Rotations/assets/models/enemy/",
+        "path": "../../assets/models/enemy/",
         "model": "scene.gltf"
       }
     },
     "materials": [
       {
         "name": "Spike #NJXV5A#14",
-        "path": "../../The-Power-Of-Rotations/assets/materials/spike.json"
+        "path": "../../assets/materials/spike.json"
       },
       {
         "name": "Simple #NJXV5A#12",
-        "path": "../../The-Power-Of-Rotations/assets/materials/simple.json"
+        "path": "../../assets/materials/simple.json"
       },
       {
         "name": "Increase Speed #NJXV5A#17",
-        "path": "../../The-Power-Of-Rotations/assets/materials/increaseSpeed.json"
+        "path": "../../assets/materials/increaseSpeed.json"
       },
       {
         "name": "Decrease Speed #NJXV5A#19",
-        "path": "../../The-Power-Of-Rotations/assets/materials/decreaseSpeed.json"
+        "path": "../../assets/materials/decreaseSpeed.json"
       }
     ],
     "guis": [
-      "../../The-Power-Of-Rotations/assets/gui/end.json",
-      "../../The-Power-Of-Rotations/assets/gui/arrow.json",
-      "../../The-Power-Of-Rotations/assets/gui/game.json",
-      "../../The-Power-Of-Rotations/assets/gui/speed.json"
+      "../../assets/gui/end.json",
+      "../../assets/gui/arrow.json",
+      "../../assets/gui/game.json",
+      "../../assets/gui/speed.json"
     ],
     "audio": {
-      "jump": { "path": "../../The-Power-Of-Rotations/assets/audio/jump.wav", "loop": false },
-      "hit": { "path": "../../The-Power-Of-Rotations/assets/audio/gameOver.mp3", "loop": false },
-      "music": { "path": "../../The-Power-Of-Rotations/assets/audio/music.wav", "loop": true },
-      "end": { "path": "../../The-Power-Of-Rotations/assets/audio/end.wav", "loop": false },
+      "jump": { "path": "../../assets/audio/jump.wav", "loop": false },
+      "hit": { "path": "../../assets/audio/gameOver.mp3", "loop": false },
+      "music": { "path": "../../assets/audio/music.wav", "loop": true },
+      "end": { "path": "../../assets/audio/end.wav", "loop": false },
       "collected": {
-        "path": "../../The-Power-Of-Rotations/assets/audio/collected.wav",
+        "path": "../../assets/audio/collected.wav",
         "loop": false
       },
       "decreaseSpeed": {
-        "path": "../../The-Power-Of-Rotations/assets/audio/decreaseSpeed.wav",
+        "path": "../../assets/audio/decreaseSpeed.wav",
         "loop": false
       },
       "increaseSpeed": {
-        "path": "../../The-Power-Of-Rotations/assets/audio/increaseSpeed.mp3",
+        "path": "../../assets/audio/increaseSpeed.mp3",
         "loop": false
       },
-      "bounce": { "path": "../../The-Power-Of-Rotations/assets/audio/bounce.wav", "loop": false },
+      "bounce": { "path": "../../assets/audio/bounce.wav", "loop": false },
       "checkpoint": {
-        "path": "../../The-Power-Of-Rotations/assets/audio/checkpoint.wav",
+        "path": "../../assets/audio/checkpoint.wav",
         "loop": false
       },
-      "glitch": { "path": "../../The-Power-Of-Rotations/assets/audio/glitch.wav", "loop": false }
+      "glitch": { "path": "../../assets/audio/glitch.wav", "loop": false }
     }
   },
   "spawn": {

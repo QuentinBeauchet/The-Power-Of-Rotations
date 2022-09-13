@@ -58,7 +58,7 @@ export default class DecreaseSpeed {
 
       BABYLON.ParticleHelper.ParseFromFileAsync(
         "DecreaseSpeed",
-        "../../The-Power-Of-Rotations/assets/particles/decreaseSpeed.json",
+        "../../assets/particles/decreaseSpeed.json",
         this.scene.scene
       ).then((sys) => (sys.emitter = this.box));
 
