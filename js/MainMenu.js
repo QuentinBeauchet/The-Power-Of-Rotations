@@ -76,8 +76,23 @@ export default class MainMenu {
       this.initLevelsGui();
     });
 
-    let file = await fetch("/levels");
-    this.levels = await file.json();
+    this.levels = [
+      "level_1.json",
+      "level_2.json",
+      "level_3.json",
+      "level_4.json",
+      "level_5.json",
+      "level_6.json",
+      "level_7.json",
+      "level_8.json",
+      "level_9.json",
+      "level_10.json",
+      "level_11.json",
+      "level_12.json",
+      "level_13.json",
+      "level_14.json",
+      "level_15.json"
+    ]
   }
 
   async initLevelsGui() {

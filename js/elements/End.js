@@ -58,8 +58,13 @@ export default class End {
   }
 
   setParticles() {
-    BABYLON.ParticleHelper.ParseFromFileAsync("end", "../../assets/particles/end.json", this.scene.scene).then(
-      (sys) => (sys.emitter = this.box.position.add(new BABYLON.Vector3(0, 2, 0)))
+    BABYLON.ParticleHelper.ParseFromFileAsync(
+      "end",
+      "../../assets/particles/end.json",
+      this.scene.scene
+    ).then(
+      (sys) =>
+        (sys.emitter = this.box.position.add(new BABYLON.Vector3(0, 2, 0)))
     );
   }
 
@@ -80,7 +85,9 @@ export default class End {
       BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT
     );
 
-    this.scene.advancedTexture.parseContent(this.scene.assetsManager.Guis["End"]);
+    this.scene.advancedTexture.parseContent(
+      this.scene.assetsManager.Guis["End"]
+    );
     this.scene.advancedTexture.idealWidth = 1500;
     this.scene.advancedTexture.idealHeight = 1200;
     this.scene.advancedTexture.getChildren()[0].isVisible = false;
@@ -98,10 +105,31 @@ export default class End {
       completion.text = `${this.scene.collected}/${this.scene.collectable} Pumpkins Collected`;
 
       this.scene.exitLevel = () => {
-        fetch(
-          `/addScore?level=${this.scene.file}&time=${endTime}&collected=${this.scene.collected}&collectable=${this.scene.collectable}`
+        var level = this.scene.file;
+        var time = endTime;
+        var collected = this.scene.collected;
+        var collectable = this.scene.collectable;
+
+        let better = false;
+        if (window.scores[level]) {
+          if (time > window.scores[level].time) {
+            time = window.scores[level].time;
+            better = true;
+          }
+          if (parseInt(collected) < parseInt(window.scores[level].collected)) {
+            collected = window.scores[level].collected;
+            better = true;
+          }
+        } else {
+          better = true;
+        }
+
+        window.scores[level] = { time, collected, collectable: collectable };
+        localStorage.setItem("scores", JSON.stringify(window.scores));
+
+        window.changeScene(
+          1 + parseInt(this.scene.file.replace(/[A-Za-z$-/_]/g, ""))
         );
-        window.changeScene(1 + parseInt(this.scene.file.replace(/[A-Za-z$-/_]/g, "")));
       };
 
       button.onPointerClickObservable.add(() => this.scene.exitLevel());
