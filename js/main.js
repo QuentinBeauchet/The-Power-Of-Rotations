@@ -6,16 +6,17 @@ iframe.src = "https://editor.isf.video/shaders/5e7a7f837c113618206ddf11/embed?em
 iframe.setAttribute("frameborder", "0");
 document.body.appendChild(iframe);
 
-const refreshScores = () => {
-  window.scores = JSON.parse(localStorage.getItem('scores') || "{}")
-};
-
 window.onload = async () => {
   window.canvas = document.querySelector("#myCanvas");
   window.engine = new BABYLON.Engine(window.canvas, true);
 
   var menu = new MainMenu();
   var currentScene = menu;
+  
+  const refreshScores = () => {
+    window.scores = JSON.parse(localStorage.getItem('scores') || "{}")
+  };
+  
   refreshScores();
 
   window.changeScene = async (index) => {
